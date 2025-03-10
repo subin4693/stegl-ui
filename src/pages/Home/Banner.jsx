@@ -27,7 +27,6 @@ const Banner = () => {
       transition={{ duration: 1 }}
       className="relative h-[90vh] flex justify-center items-center text-center px-5 lg:px-10"
     >
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -37,10 +36,8 @@ const Banner = () => {
         }}
       ></div>
 
-      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/90 to-white/20"></div>
 
-      {/* Text Section */}
       <motion.div className="relative z-10 w-full max-w-3xl">
         <motion.h2
           key={currentSentence}

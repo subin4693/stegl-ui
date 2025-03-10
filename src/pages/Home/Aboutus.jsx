@@ -9,23 +9,19 @@ const textVariants = {
 const Aboutus = () => {
   return (
     <div className="px-5 lg:px-20 py-10">
-      {/* Title */}
       <motion.h1
         initial="hidden"
         whileInView="visible"
-        // viewport={{ once: true }}
         variants={textVariants}
         className="text-4xl lg:text-5xl text-center font-bold mb-10 text-blue-900"
       >
         About Us
       </motion.h1>
 
-      {/* Content Section */}
       <div className="flex flex-col lg:flex-row   gap-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
-          // viewport={{ once: true }}
           className="w-full lg:w-1/2"
         >
           <img
@@ -37,7 +33,6 @@ const Aboutus = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          // viewport={{ once: true }}
           variants={textVariants}
           className="w-full lg:w-1/2 text-lg "
         >
@@ -57,8 +52,6 @@ const Aboutus = () => {
             consumer and environmental standards.
           </p>
         </motion.div>
-
-        {/* Image Section */}
       </div>
     </div>
   );

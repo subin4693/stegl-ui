@@ -53,12 +53,12 @@ const JoinWithUs = () => {
 
         {/* Apply Now */}
         <motion.a
-          href="tel:6282425353"
+          href="tel: 88481 98144"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-block bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-300"
         >
-          📞 Apply Now: 6282425353
+          📞 Apply Now: 88481 98144
         </motion.a>
       </div>
     </motion.div>

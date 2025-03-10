@@ -10,7 +10,6 @@ const ContactUs = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="flex   flex-col flex-col-reverse lg:flex-row justify-center items-center min-h-[80vh] bg-white px-5 lg:px-10 py-10"
     >
-      {/* Image Section */}
       <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0 hidden lg:flex">
         <img
           src={image}
@@ -19,14 +18,12 @@ const ContactUs = () => {
         />
       </div>
 
-      {/* Contact Form Section */}
       <div className="w-full lg:w-1/2 bg-white p-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center lg:text-left">
           Get in Touch
         </h2>
 
         <form className="space-y-4">
-          {/* Name Input */}
           <div>
             <label className="block text-gray-700 text-lg mb-1">Name</label>
             <input
@@ -36,7 +33,6 @@ const ContactUs = () => {
             />
           </div>
 
-          {/* Email Input */}
           <div>
             <label className="block text-gray-700 text-lg mb-1">Email</label>
             <input
@@ -46,7 +42,6 @@ const ContactUs = () => {
             />
           </div>
 
-          {/* Message Input */}
           <div>
             <label className="block text-gray-700 text-lg mb-1">Message</label>
             <textarea
@@ -56,7 +51,6 @@ const ContactUs = () => {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

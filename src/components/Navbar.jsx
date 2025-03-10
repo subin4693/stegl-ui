@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo-bg.png";
@@ -11,21 +11,22 @@ const Navbar = () => {
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="p-2 md:p-5  md:px-10 shadow flex justify-between items-center sticky top-0 right-0 left-0 backdrop-blur-3xl bg-white/10 z-[100] bg-gradient-to-b from-blue-900/90 to-blue-700/90"
+      className="p-2 md:p-5 md:px-10 shadow flex justify-between items-center sticky top-0 right-0 left-0 backdrop-blur-3xl bg-white/10 z-[100] bg-gradient-to-b from-blue-900/90 to-blue-700/90"
     >
-      {/* Logo */}
-      <motion.div whileHover={{ scale: 1.1 }} className=" cursor-pointer">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        className="cursor-pointer flex items-center "
+      >
         <img src={logo} className="w-20 h-12 object-contain" alt="Logo" />
+        <h2 className="text-xl font-semibold text-white">Lacta Corporate</h2>
       </motion.div>
 
-      {/* Mobile Menu Button */}
       <div className="lg:hidden">
         <button onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
-      {/* Navigation Links */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -46,7 +47,6 @@ const Navbar = () => {
         )}
       </motion.div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <motion.div
           initial={{ x: -200, opacity: 0 }}
@@ -60,7 +60,7 @@ const Navbar = () => {
                 key={index}
                 whileHover={{ scale: 1.1, color: "#1d4ed8" }}
                 whileTap={{ scale: 0.95 }}
-                className="cursor-pointer text-center "
+                className="cursor-pointer text-center"
                 onClick={() => setMenuOpen(false)}
               >
                 {item}
@@ -74,5 +74,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-// "url('https://portal.engineersaustralia.org.au/sites/default/files/Drone_illo_200117.gif')",
-// https://www.act.com.ng/uploads/industry/1572536744ezgif-1-3f10b40ebe32-1544776810367.gif
