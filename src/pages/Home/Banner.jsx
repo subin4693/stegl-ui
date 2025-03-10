@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import image from "@/assets/img4.jpg";
 
 const sentences = [
   "We specialize in high-quality liquid consumer products like detergents.",
@@ -30,12 +31,13 @@ const Banner = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('https://www.ag5.com/wp-content/uploads/2023/02/3.png')",
+          backgroundImage: `url(${image})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       ></div>
 
-      {/* Gradient Overlay (Ensures Image is Visible) */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/90 to-white/20"></div>
 
       {/* Text Section */}
@@ -46,7 +48,7 @@ const Banner = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-3xl lg:text-6xl font-bold text-white drop-shadow-lg   px-5 py-3 rounded-lg"
+          className="text-3xl lg:text-6xl font-bold text-white drop-shadow-lg px-5 py-3 rounded-lg"
         >
           {sentences[currentSentence]}
         </motion.h2>

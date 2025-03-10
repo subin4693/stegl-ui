@@ -16,7 +16,6 @@ const Navbar = () => {
       {/* Logo */}
       <motion.div whileHover={{ scale: 1.1 }} className=" cursor-pointer">
         <img src={logo} className="w-20 h-12 object-contain" alt="Logo" />
-        Lacta corporate
       </motion.div>
 
       {/* Mobile Menu Button */}

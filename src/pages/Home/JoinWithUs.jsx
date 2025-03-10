@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image from "@/assets/img2.jpg";
 
 const JoinWithUs = () => {
   return (
@@ -13,8 +14,7 @@ const JoinWithUs = () => {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-60  "
         style={{
-          backgroundImage:
-            "url('https://www.act.com.ng/uploads/industry/1572536744ezgif-1-3f10b40ebe32-1544776810367.gif')",
+          backgroundImage: `url( ${image})`,
         }}
       ></div>
 

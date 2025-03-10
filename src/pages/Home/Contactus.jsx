@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image from "@/assets/img3.jpg";
 
 const ContactUs = () => {
   return (
@@ -12,7 +13,7 @@ const ContactUs = () => {
       {/* Image Section */}
       <div className="w-full lg:w-1/2 flex justify-center mb-8 lg:mb-0 hidden lg:flex">
         <img
-          src="https://www.ujudebug.com/wp-content/uploads/2022/07/contact-us-content.gif"
+          src={image}
           alt="Contact Us"
           className="w-full max-w-md lg:max-w-lg object-cover rounded-lg  "
         />

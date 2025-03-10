@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import image from "@/assets/img1.jpg";
 const textVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -21,7 +21,7 @@ const Aboutus = () => {
       </motion.h1>
 
       {/* Content Section */}
-      <div className="flex flex-col lg:flex-row items-center gap-10">
+      <div className="flex flex-col lg:flex-row   gap-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
@@ -29,7 +29,7 @@ const Aboutus = () => {
           className="w-full lg:w-1/2"
         >
           <img
-            src="https://media.licdn.com/dms/image/v2/D5612AQG1d_PdueYTSw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1682913545543?e=2147483647&v=beta&t=nrtwZdq14_HS3678rfpU_X7iVTDGdERUPMF6ZZRYHKc"
+            src={image}
             className="w-full h-auto rounded-lg  "
             alt="About Us"
           />
@@ -39,27 +39,22 @@ const Aboutus = () => {
           whileInView="visible"
           // viewport={{ once: true }}
           variants={textVariants}
-          className="w-full lg:w-1/2 text-lg leading-relaxed"
+          className="w-full lg:w-1/2 text-lg "
         >
           <p>
-            We specialize in manufacturing high-quality **liquid-based consumer
-            products**, including:
-          </p>
-          <ul className="list-disc ml-6 mt-3 space-y-2">
-            <li>Detergents & Dishwashing Liquids</li>
-            <li>Fabric Softeners & Personal Care Items</li>
-            <li>Household Cleaning Solutions</li>
-          </ul>
-
-          <p className="mt-4">
-            Our focus includes **advanced formulation, quality control, and
-            sustainable packaging** to ensure **product safety &
-            effectiveness**.
+            We specialize in highquality products, variety of steel
+            products,liquid products like detergents, medical equipments
           </p>
 
           <p className="mt-4">
-            We integrate **eco-friendly ingredients** and promote **recyclable
-            packaging** to meet consumer & environmental standards.
+            A household and liquid manufacturing company specializes in
+            producing liquid-based consumer products such as detergents,
+            dishwashing liquids, fabric softeners and other cleaning or personal
+            care items. These companies focus on formulation, quality control,
+            packaging, and regulatory compliance to ensure product safety and
+            effectiveness. They often incorporate sustainability practices, such
+            as eco-friendly ingredients and recyclable packaging, to meet
+            consumer and environmental standards.
           </p>
         </motion.div>
 
