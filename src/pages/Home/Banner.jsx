@@ -2,24 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import image from "@/assets/img4.jpg";
 
-const sentences = [
-  "We specialize in high-quality liquid consumer products like detergents.",
-  "Our focus is on advanced formulation and strict quality control.",
-  "We ensure regulatory compliance for safe and effective products.",
-  "Sustainability is key—we use eco-friendly ingredients and recyclable packaging.",
-  "Our goal is to meet both consumer expectations and environmental standards.",
-];
-
 const Banner = () => {
-  const [currentSentence, setCurrentSentence] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSentence((prev) => (prev + 1) % sentences.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -40,14 +23,14 @@ const Banner = () => {
 
       <motion.div className="relative z-10 w-full max-w-3xl">
         <motion.h2
-          key={currentSentence}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-3xl lg:text-6xl font-bold text-white drop-shadow-lg px-5 py-3 rounded-lg"
         >
-          {sentences[currentSentence]}
+          We specialize in highquality products, variety of steel
+          products,liquid products like detergents, medical equipments
         </motion.h2>
       </motion.div>
     </motion.div>
